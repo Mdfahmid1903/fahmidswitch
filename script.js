@@ -6,6 +6,9 @@ const container = document.querySelector(".container");
 const red = document.querySelector(".red");
 const yellow = document.querySelector(".yellow");
 const green = document.querySelector(".green");
+const heart = document.querySelector(".heart");
+const heartCount = document.querySelector(".count");
+
 
 button.addEventListener('click', ()=>{
 body.classList.toggle('darkmode');
@@ -42,5 +45,19 @@ button3.addEventListener('click', ()=>{
     }, 4000);
     red.classList.remove('light');
     
+})
+
+// heart.addEventListener('click', ()=>{
+//     heartCount.innerText = parseInt(heartCount.innerText) + 1;
+//     heart.classList.toggle('active');
+// })
+
+heart.addEventListener('click', ()=>{
+    if(heart.classList.contains('active')){
+        heartCount.innerText = parseInt(heartCount.innerText) - 1;
+    }else{
+        heartCount.innerText = parseInt(heartCount.innerText) + 1;
+    }
+    heart.classList.toggle('active');
 })
 
