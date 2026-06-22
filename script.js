@@ -23,23 +23,24 @@ button2.addEventListener('click', ()=>{
 
 button3.addEventListener('click', ()=>{
     setTimeout(() => {
-        red.classList.toggle('light');
+        red.classList.add('light');
     }, 1000);
     
     setTimeout(() => {
         red.classList.remove('light');
-        yellow.classList.toggle('light');
+        yellow.classList.add('light');
     }, 2000);
     
     setTimeout(() => {
         yellow.classList.remove('light');
-        green.classList.toggle('light');
+        green.classList.add('light');
     }, 3000);
     
     setTimeout(() => {
         green.classList.remove('light');
-        red.classList.toggle('light');
+        red.classList.add('light');
     }, 4000);
+    red.classList.remove('light');
     
 })
 
