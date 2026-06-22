@@ -16,9 +16,7 @@ body.darkmode {
   background-color: #111111;
 }
 @keyframes fan {
-  from {
-    rotate: 0deg;
-  }
+  
   to {
     rotate: 360deg;
   }
