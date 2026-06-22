@@ -1,55 +1,116 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    
-    background-color: rgb(94, 140, 180);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(94, 140, 180);
 }
-body.darkmode{
-    background-color: #111111;
+body.darkmode {
+  /* min-height: 100vh; */
+  background-color: #111111;
 }
-@keyframes fan{
-    from{  rotate:0deg;}
-    to{  rotate:360deg;}
+@keyframes fan {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
 }
-.container{
-    padding: 100px;
-    text-align: center;
-    font-size: 20rem;
+.container {
+  margin: 25vh 0;
+  text-align: center;
+  font-size: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
 }
-.fan{
-    padding: 100px;
-    font-size: 20rem;
-    animation: fan 2s linear infinite;  
-    display: block;
-    transform-origin: center;
+.fan {
+  align-items: center;
+  justify-content: center;
+  font-size: 20rem;
+  animation: fan 2s linear infinite;
+  display: inline-block;
+  transform-origin: center;
 }
 
-.switch{
-    position: fixed;
-    right: 40px;
-    top: 40px;
-   padding: 10px;
-   cursor: pointer;
-    background-color: #e78a10;
-    border-radius: 50%;
-    font-size: 2rem;
-    border: 1px solid transparent;
+.switch {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #e78a10;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 1px solid transparent;
 }
 
+.switch2 {
+  position: fixed;
+  right: 40px;
+  top: 120px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #e78a10;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 1px solid transparent;
+}
 
-    .switch2{
-    position: fixed;
-    right: 40px;
-    top: 120px;
-   padding: 10px;
-   cursor: pointer;
-    background-color: #e78a10;
-    border-radius: 50%;
-    font-size: 2rem;
-    border: 1px solid transparent;
+@keyframes light {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.light {
+  /* margin: 100px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 30px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: light 2s linear infinite;
+}
+.yellow {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: light 2s linear infinite;
+}
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: light 2s linear infinite;
 }
