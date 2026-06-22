@@ -35,8 +35,8 @@ body.darkmode {
   justify-content: center;
   font-size: 20rem;
   animation: fan 2s linear infinite;
-  display: inline-block;
-  transform-origin: center;
+  display: inline-flex;
+  transform-origin: center center;
 }
 
 .switch {
