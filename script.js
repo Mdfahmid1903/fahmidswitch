@@ -1,14 +1,19 @@
 const button = document.querySelector(".switch");
 const button2 = document.querySelector(".switch2");
 const button3 = document.querySelector(".switch3");
+const button4 = document.querySelector(".switch4");
+const button5 = document.querySelector(".reset-button");
 const body = document.querySelector("body");
 const container = document.querySelector(".container");
 const red = document.querySelector(".red");
 const yellow = document.querySelector(".yellow");
 const green = document.querySelector(".green");
 const heart = document.querySelector(".heart");
-const heartCount = document.querySelector(".count");
-
+const heartCount = document.querySelector(".like-count");
+const count = document.querySelector(".count");
+const form = document.querySelector("form");
+const name = document.querySelector("#name");
+const submit = document.querySelector(".submit");
 
 button.addEventListener('click', ()=>{
 body.classList.toggle('darkmode');
@@ -61,3 +66,15 @@ heart.addEventListener('click', ()=>{
     heart.classList.toggle('active');
 })
 
+button4.addEventListener('click', ()=>{
+    count.innerText = Number(count.innerText) + 1;
+})
+
+button5.addEventListener('click', ()=>{
+    count.innerText = 0;
+})
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    alert(`hello! ${name.value}. How are you?`);
+})
