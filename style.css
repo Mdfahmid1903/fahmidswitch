@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
+ 
 body {
   display: flex;
   justify-content: center;
@@ -191,4 +193,28 @@ form input{
     padding: 10px;
     border-radius: 10px;
     border: 1px solid transparent;
+}
+
+.switch5{
+  padding: 10px;
+  cursor: pointer;
+  background-color: #e78a10;
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 1px solid transparent;
+}
+
+.color-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 5px;
+     position: fixed;
+  right: 40px;
+  top: 520px;
+}
+.color-container p{
+    font-size: 2rem;
 }
