@@ -89,11 +89,23 @@ color.textContent = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.ra
 
 text.addEventListener('input', () => {
   let characterCount = text.value.length ;
-  character.textContent = `${280 - characterCount} left`;
-  if (characterCount > 160) {
+  character.textContent = `${100 - characterCount} left`;
+
+  if(characterCount > 100){
+    character.textContent = 'max limit reached';
+  } 
+  else if(characterCount > 90){
     character.style.color = 'red';
-  } else{
+  }
+  else if (characterCount > 70) {
+    character.style.color = 'orange';
+  }
+  else if (characterCount > 50) {
+    character.style.color = 'yellow';
+  } 
+  else {
     character.style.color = 'green';
   }
+  
   }
-);a
+);
