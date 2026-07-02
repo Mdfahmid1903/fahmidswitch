@@ -135,6 +135,6 @@ form2.addEventListener('submit', (e) => {
 
 form3.addEventListener('submit', (e) => {
   e.preventDefault();
-  tipAmount.innerText = "TIP:"+(bill.value * (tip.value / 100)).toFixed(2);
-  totalBill.innerText = "TOTAL:"+(bill.value * (1 + tip.value / 100)).toFixed(2);
+  tipAmount.innerText = "TIP:"+(bill.value * (tip.value / 100)).toFixed(2)+"$";
+  totalBill.innerText = "TOTAL:"+(bill.value * (1 + tip.value / 100)).toFixed(2)+"$";
 });
