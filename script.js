@@ -30,6 +30,10 @@ const totalBill = document.querySelector('.total');
 const form4 = document.querySelector('.form4');
 const number = document.querySelector('#number');
 const oddEven = document.querySelector('.oddEven');
+const form5 = document.querySelector('.form5');
+const weather = document.querySelector('#weather');
+const weatherText = document.querySelector('.weather');
+const temperature = document.querySelector("#temperature")
 
 button.addEventListener('click', () => {
   body.classList.toggle('darkmode');
@@ -146,11 +150,32 @@ form3.addEventListener('submit', (e) => {
 
 form4.addEventListener('submit', (e) => {
   e.preventDefault();
-  if(number.value % 2==0){
-    oddEven.innerText = "EVEN";
+  const num = Number(number.value);
+  if(num === 0){
+    oddEven.innerText = "ZERO";
   }
-  else{
-    oddEven.innerText = "ODD";123
+ 
+  else if(num % 2===0){
+    oddEven.innerText = "EVEN";
+  } 
+ 
+ else {
+    oddEven.innerText = "ODD";
   }
   number.value = '';
-})
+});
+
+form5.addEventListener("submit", (e)=>{
+e.preventDefault();
+const weatherValue= Number(weather.value);
+
+if(temperature.value == "c"){
+  weatherText.innerText = 
+(weatherValue * (9/5)) + 32 + "F";
+}
+else{
+  weatherText.innerText = (weatherValue	- 32) * (5/9) + "C";
+}
+weather.value = '';
+temperature.value = '';
+});
