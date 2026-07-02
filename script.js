@@ -27,6 +27,9 @@ const tip = document.querySelector('#tip');
 const total = document.querySelector('.total');
 const tipAmount = document.querySelector('.tip-amount');
 const totalBill = document.querySelector('.total');
+const form4 = document.querySelector('.form4');
+const number = document.querySelector('#number');
+const oddEven = document.querySelector('.oddEven');
 
 button.addEventListener('click', () => {
   body.classList.toggle('darkmode');
@@ -137,4 +140,17 @@ form3.addEventListener('submit', (e) => {
   e.preventDefault();
   tipAmount.innerText = "TIP:"+(bill.value * (tip.value / 100)).toFixed(2)+"$";
   totalBill.innerText = "TOTAL:"+(bill.value * (1 + tip.value / 100)).toFixed(2)+"$";
+  bill.value = '';
+  tip.value = '';
 });
+
+form4.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if(number.value % 2==0){
+    oddEven.innerText = "EVEN";
+  }
+  else{
+    oddEven.innerText = "ODD";123
+  }
+  number.value = '';
+})
