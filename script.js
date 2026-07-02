@@ -18,6 +18,15 @@ const switch5 = document.querySelector('.switch5');
 const color = document.querySelector('.rgb');
 const character = document.querySelector('.char');
 const text = document.querySelector('#text');
+const form2 = document.querySelector('.form2');
+const height = document.querySelector('#height');
+const heightText = document.querySelector('.height-count');
+const form3 = document.querySelector('.form3');
+const bill = document.querySelector('#bill');
+const tip = document.querySelector('#tip');
+const total = document.querySelector('.total');
+const tipAmount = document.querySelector('.tip-amount');
+const totalBill = document.querySelector('.total');
 
 button.addEventListener('click', () => {
   body.classList.toggle('darkmode');
@@ -79,6 +88,8 @@ button5.addEventListener('click', () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  window.scrollTo(top);
+
   alert(`hello! ${name.value}. How are you?`);
 });
 
@@ -109,3 +120,21 @@ text.addEventListener('input', () => {
   
   }
 );
+
+form2.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (height.value < 140) {
+    heightText.innerText = 'You are not tall enough to enter this website. Please grow up!Minimum height is 140cm.';
+    heightText.style.color = 'red';
+  }
+  else {
+    heightText.innerText = 'You are tall enough to enter this website';
+    heightText.style.color = 'green';
+  }
+});
+
+form3.addEventListener('submit', (e) => {
+  e.preventDefault();
+  tipAmount.innerText = "TIP:"+(bill.value * (tip.value / 100)).toFixed(2);
+  totalBill.innerText = "TOTAL:"+(bill.value * (1 + tip.value / 100)).toFixed(2);
+});

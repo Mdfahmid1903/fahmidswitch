@@ -52,6 +52,33 @@
       <p class="char" style="color: green">100 left</p>
     </form>
 
+    <form action="#" class="form2">
+      <label for="height">height</label>
+      <input
+        type="number"
+        id="height"
+        name="height"
+        placeholder="input height (cm)"
+      />
+      <p class="height-count"></p>
+      <input type="submit" value="submit" />
+    </form>
+
+    <form action="#" class="form3">
+      <label for="bill">Bill</label>
+      <input type="number" id="bill" name="bill" placeholder="input bill" />
+      <input type="submit" value="submit" />
+      <select name="bill" id="tip">
+        <option value="" selected disabled>tip percecntage</option>
+        <option value="10">10%</option>
+        <option value="15">15%</option>
+        <option value="20">20%</option>
+      </select>
+      <div class="tip-container">
+        <p class="tip-amount">TIP:</p>
+        <p class="total">TOTAL:</p>
+      </div>
+    </form>
     <script src="script.js"></script>
   </body>
 </html>
